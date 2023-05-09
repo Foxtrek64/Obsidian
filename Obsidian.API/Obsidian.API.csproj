@@ -1,28 +1,14 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Remora.Sdk/2.0.1">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
 		<EnablePreviewFeatures>True</EnablePreviewFeatures>
-		<Nullable>enable</Nullable>
-		<AssemblyName>Obsidian.API</AssemblyName>
-		<RootNamespace>Obsidian.API</RootNamespace>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<PropertyGroup>
 		<Version>1.0.0</Version>
-		<Authors>Obsidian Team</Authors>
-		<Company>Obsidian Team</Company>
-		<Product>Obsidian</Product>
 		<Description>The plugin API for Obsidian, a Minecraft server.</Description>
-		<PackageProjectUrl>https://github.com/ObsidianServer/Obsidian</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/ObsidianServer/Obsidian</RepositoryUrl>
-		<PackageTags>minecraft obsidian api plugin plugins</PackageTags>
-		<PackageIconUrl>https://i.imgur.com/jU1lkP4.png</PackageIconUrl>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<AssemblyVersion>1.0.0.0</AssemblyVersion>
-		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<NoWarn>1591</NoWarn>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
-		<CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
+		<PackageTags>$(PackageTags);api;plugin;plugins</PackageTags>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -37,18 +23,6 @@
 		<AdditionalFiles Include="..\Obsidian\Assets\blocks.json" Link="Assets\blocks.json" />
 		<AdditionalFiles Include="..\Obsidian\Assets\items.json" Link="Assets\items.json" />
 		<AdditionalFiles Include="..\Obsidian\Assets\fluids.json" Link="Assets\fluids.json" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="..\.editorconfig" Link=".editorconfig" />
-		<None Include="..\LICENSE">
-			<Pack>True</Pack>
-			<PackagePath></PackagePath>
-		</None>
 	</ItemGroup>
 
 	<ItemGroup>

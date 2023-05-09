@@ -1,0 +1,23 @@
+<Project>
+	<PropertyGroup>
+		<LegalAuthor>Obsidian Team</LegalAuthor>
+		<LegalEmail>https://github.com/ObsidianMC/Obsidian/discussions</LegalEmail>
+		<Company>Obsidian Team</Company>
+		<LegalCopyrightHolder>Obsidian Team</LegalCopyrightHolder>
+		<LegalLicense>GPL-3.0-or-later</LegalLicense>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<SolutionDir>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)/))</SolutionDir>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<RepositoryBranch>main</RepositoryBranch>
+		<RepositoryUrl>https://github.com/ObsidianMC/Obsidian</RepositoryUrl>
+		
+		<PackageIconUrl>https://i.imgur.com/jU1lkP4.png</PackageIconUrl>
+		<PackageProjectUrl>https://github.com/ObsidianMC/Obsidian</PackageProjectUrl>
+		<PackageOutputPath>$(SolutionDir)/nuget</PackageOutputPath>
+		<PackageTags>minecraft;obsidian;</PackageTags>
+	</PropertyGroup>
+</Project>
